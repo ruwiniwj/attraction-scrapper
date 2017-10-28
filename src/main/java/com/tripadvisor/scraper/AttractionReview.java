@@ -1,6 +1,6 @@
 package com.tripadvisor.scraper;
 
-import com.tripadvisor.Bean.*;
+import com.tripadvisor.bean.*;
 import com.tripadvisor.util.DatabaseWriter;
 import com.tripadvisor.util.DateConverter;
 import com.tripadvisor.util.ScrapperFileWriter;

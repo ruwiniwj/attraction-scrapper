@@ -1,4 +1,4 @@
-package com.tripadvisor.Bean;
+package com.tripadvisor.bean;
 
 import java.io.Serializable;
 

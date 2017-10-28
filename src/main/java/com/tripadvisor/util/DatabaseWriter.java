@@ -4,7 +4,7 @@ import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.mongodb.*;
 import com.mongodb.util.JSON;
-import com.tripadvisor.Bean.AttractionBean;
+import com.tripadvisor.bean.AttractionBean;
 
 public class DatabaseWriter {
     private MongoClient client = new MongoClient("localhost", 27017);

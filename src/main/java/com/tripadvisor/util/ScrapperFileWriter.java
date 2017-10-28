@@ -2,10 +2,8 @@ package com.tripadvisor.util;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
-import com.tripadvisor.Bean.AttractionBean;
+import com.tripadvisor.bean.AttractionBean;
 
-import javax.xml.bind.JAXBContext;
-import javax.xml.bind.Marshaller;
 import java.io.*;
 import java.nio.file.Files;
 import java.nio.file.Paths;
