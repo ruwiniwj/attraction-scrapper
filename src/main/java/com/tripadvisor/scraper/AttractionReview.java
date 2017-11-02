@@ -374,7 +374,8 @@ public class AttractionReview {
                 for (WebElement review : reviews) {
                     String title = review.findElement(By.cssSelector("span.noQuotes")).getText();
                     String reviewBody = review.findElement(By.cssSelector("p.partial_entry")).getText();
-                    String dateReviewed = review.findElement(By.cssSelector("span.ratingDate")).getText();
+                    String dateReviewed = review.findElement(By.cssSelector("span.ratingDate")).getText()
+                            .replace("Reviewed ", "");
                     if (dateConverter.checkIfRelativeDate(dateReviewed)) {
                         dateReviewed = dateConverter.convertDate(dateReviewed);
                     }
@@ -434,10 +435,11 @@ public class AttractionReview {
             for (WebElement moreLink : moreLinks) {
                 if (moreLink != null && "more".equalsIgnoreCase(moreLink.getText())) {
                     moreLink.click();
+                    Thread.sleep(500);
                 }
             }
             waitForJsToLoad();
-            Thread.sleep(3000);
+            Thread.sleep(5000);
         } catch (Exception ignored) {
             // NoSuchElem or Interrupted Exception, can be ignored
         }
@@ -452,7 +454,7 @@ public class AttractionReview {
         try {
             nextLink.click();
             waitForJsToLoad();
-            Thread.sleep(3000);
+            Thread.sleep(7000);
         } catch (Exception ignored) {
             ignored.printStackTrace();
             // NoSuchElem or Interrupted Exception, can be ignored
@@ -526,10 +528,11 @@ public class AttractionReview {
             for (WebElement showAllLink : showAllLinks) {
                 if (showAllLink != null && showAllLink.getText().endsWith("answers")) {
                     showAllLink.click();
+                    Thread.sleep(500);
                 }
             }
             waitForJsToLoad();
-            Thread.sleep(5000);
+            Thread.sleep(7000);
         } catch (Exception ignored) {
             ignored.printStackTrace();
             // NoSuchElem or Interrupted Exception, can be ignored

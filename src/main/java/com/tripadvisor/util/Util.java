@@ -52,8 +52,7 @@ public class Util {
     public static String proxyRandomizer() {
 //        todo prior to scraping update the proxy list with proxies for the day
         List<String> proxies = new ArrayList<String>(Arrays.asList(
-                "45.32.1.61:3128",
-                "47.88.50.181:808"));
+                "198.27.115.40:8080"));
         return proxies.get(random.nextInt(proxies.size()));
     }
 
